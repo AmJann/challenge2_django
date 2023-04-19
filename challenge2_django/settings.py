@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'challenge2',
     'rest_framework',
     'corsheaders',
+    'users',
 ]
 
 MIDDLEWARE = [

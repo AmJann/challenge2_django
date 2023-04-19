@@ -6,8 +6,12 @@ from .models import ToDo
 from django.contrib.auth.models import User
 
 class ToDosProtected(generics.ListAPIView):
-    queryset = ToDo.objects.all()
-    serializer_class = ToDoSerializer    
+    serializer_class = ToDoSerializer
+
+    def get_queryset(self):
+        queryset = ToDo.objects.filter(user=self.kwargs['id'])
+        return queryset
+
 
  
 

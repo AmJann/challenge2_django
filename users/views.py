@@ -7,5 +7,12 @@ class CreateUser(generics.CreateAPIView):
     serializer_class = UserSearlizer
     permission_classes = [permissions.AllowAny]
 
+class CheckUser(generics.ListAPIView):
+    serializer_class = UserSearlizer
+
+    def get_queryset(self):
+        queryset = User.objects.filter(name=self.kwargs['name'])
+        return queryset
+
 
 

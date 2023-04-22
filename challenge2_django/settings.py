@@ -102,14 +102,10 @@ WSGI_APPLICATION = 'challenge2_django.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'challenge2',
-        'USER': 'challenge2user',
-        'PASSWORD': 'challenge2',
-        'HOST': 'localhost'
-        # 'NAME': os.environ['DBNAME'],
-        # 'USER': os.environ['DBUSER'],
-        # 'PASSWORD': os.environ['DBPASSWORD'],
-        # 'HOST': os.environ['DBHOST']
+        'NAME': os.environ['DBNAME'],
+        'USER': os.environ['DBUSER'],
+        'PASSWORD': os.environ['DBPASSWORD'],
+        'HOST': os.environ['DBHOST']
     }
 }
 
